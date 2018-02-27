@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const pjson = require('../package.json');
 const links = require('../links.json') || {};
-require("create-if-not-exist")('./links.json','{}');
+require("create-if-not-exist")('./links.json', '{}');
 
 const program = require('commander');
 
@@ -40,6 +40,14 @@ if (!program.args.length) {
             break;
         case 'list' :
             console.log(JSON.stringify(links));
+            break;
+        case 'use' :
+            if (!program.args[1]) {
+                program.help();
+            } else {
+                return links[program.args[1]];
+            }
+            break;
     }
 
 }
