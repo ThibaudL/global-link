@@ -2,7 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 
-let globalLinksPath = `${process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME']}/AppData/Roaming/npm/globa-links.json`;
+let globalLinksPath = `${process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME']}/AppData/Roaming/npm/global-links.json`;
 require("create-if-not-exist")(globalLinksPath, '{}');
 
 const pjson = require(path.resolve('./package.json'));
