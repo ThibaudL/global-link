@@ -2,8 +2,8 @@
 const path = require('path');
 const fs = require('fs');
 const pjson = require('../package.json');
-const links = require('../links.json') || {};
 require("create-if-not-exist")('./links.json', '{}');
+const links = require('../links.json') || {};
 
 const program = require('commander');
 
@@ -28,7 +28,7 @@ if (!program.args.length) {
 
     switch (program.args[0]) {
         case 'add' :
-            if (links[pjson.name] !== process.argv[1]) {
+            if (links[pjson.name] && links[pjson.name] !== process.argv[1]) {
                 console.warn(`Warning, this project was already registered here : ${links[pjson.name]}`)
             }
             links[pjson.name] = process.argv[1];
@@ -45,7 +45,7 @@ if (!program.args.length) {
             if (!program.args[1]) {
                 program.help();
             } else {
-                return links[program.args[1]];
+                process.exit(links[program.args[1]]);
             }
             break;
     }
