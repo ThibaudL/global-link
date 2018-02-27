@@ -1,6 +1,6 @@
 {
   "name": "global-link",
-  "version": "1.0.1-4",
+  "version": "1.0.1-5",
   "description": "alternative to npm link",
   "main": "index.js",
   "bin": {
