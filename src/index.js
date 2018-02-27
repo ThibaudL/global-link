@@ -31,10 +31,10 @@ if (!program.args.length) {
 
     switch (program.args[0]) {
         case 'add' :
-            if (links[pjson.name] && links[pjson.name] !== path.resolve(__dirname)) {
+            if (links[pjson.name] && links[pjson.name] !== path.resolve('./')) {
                 console.warn(`Warning, this project was already registered here : ${links[pjson.name]}`)
             }
-            links[pjson.name] = path.resolve(__dirname);
+            links[pjson.name] = path.resolve('./');
             writeFile();
             break;
         case 'remove' :
