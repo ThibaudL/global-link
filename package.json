@@ -4,7 +4,7 @@
   "description": "alternative to npm link",
   "main": "index.js",
   "bin": {
-    "linker": "./src/index.js"
+    "global-link": "./src/index.js"
   },
   "scripts": {
     "start": "node src/index.js",
@@ -15,5 +15,8 @@
   "dependencies": {
     "commander": "^2.14.1",
     "create-if-not-exist": "0.0.2"
+  },
+  "publishConfig": {
+    "registry": "http://intserv:8081/nexus/content/repositories/npm-internal"
   }
 }

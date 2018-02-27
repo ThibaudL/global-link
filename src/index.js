@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 const path = require('path');
 const fs = require('fs');
-const pjson = require('../package.json');
-require("create-if-not-exist")('./links.json', '{}');
-const links = require('../links.json') || {};
+const pjson = require('./package.json');
+require("create-if-not-exist")('links.json', '{}');
+const links = require('links.json') || {};
 
 const program = require('commander');
 
