@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const pjson = require('../package.json');
 const links = require('../links.json') || {};
-
+require("create-if-not-exist")('./links.json','{}');
 
 const program = require('commander');
 

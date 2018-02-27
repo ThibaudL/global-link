@@ -13,6 +13,7 @@
   "author": "thibaud.lamarche@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "commander": "^2.14.1"
+    "commander": "^2.14.1",
+    "create-if-not-exist": "0.0.2"
   }
 }
