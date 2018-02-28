@@ -5,12 +5,12 @@ module.exports = {
     getAliases() {
         let aliases = {};
         try {
-            alias = require(url);
-            let aliasedProjects = Object.keys(alias);
+            aliases = require(url);
+            let aliasedProjects = Object.keys(aliases);
             if(aliasedProjects.length > 0){
                 console.warn("global-link : using aliases : ");
-                aliasedProjects.forEach((a) => {
-                    console.warn("global-link : ",a,"=>",alias[a]);
+                aliasedProjects.forEach((alias) => {
+                    console.warn("global-link : ",alias,"=>",aliases[alias]);
                 });
             }else{
                 console.warn("global-link : no aliases to use");
