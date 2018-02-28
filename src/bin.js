@@ -5,7 +5,6 @@ const url = require('./preferences').url;
 
 require("create-if-not-exist")(url, '{}');
 
-const pjson = require(path.resolve('./package.json'));
 const links = require(url);
 
 const program = require('commander');
@@ -31,6 +30,7 @@ if (!program.args.length) {
 
     switch (program.args[0]) {
         case 'add' :
+            const pjson = require(path.resolve('./package.json'));
             if (links[pjson.name] && links[pjson.name] !== path.resolve('./')) {
                 console.warn(`Warning, this project was already registered here : ${links[pjson.name]}`)
             }
@@ -38,6 +38,7 @@ if (!program.args.length) {
             writeFile();
             break;
         case 'remove' :
+            const pjson = require(path.resolve('./package.json'));
             delete links[pjson.name];
             writeFile();
             break;
