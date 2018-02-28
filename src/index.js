@@ -9,8 +9,8 @@ module.exports = {
             let aliasedProjects = Object.keys(alias);
             if(aliasedProjects.length > 0){
                 console.warn("global-link : using aliases : ");
-                aliasedProjects.forEach((alias) => {
-                    console.warn("global-link : ",alias,"=>",aliasedProjects[alias]);
+                aliasedProjects.forEach((a) => {
+                    console.warn("global-link : ",a,"=>",alias[a]);
                 });
             }else{
                 console.warn("global-link : no aliases to use");
