@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const url = require('./preferences').url;
 
-require("create-if-not-exist")(urlPath, '{}');
+require("create-if-not-exist")(url, '{}');
 
 const pjson = require(path.resolve('./package.json'));
 const links = require(url);
