@@ -2,9 +2,9 @@
   "name": "global-link",
   "version": "1.0.1-6",
   "description": "alternative to npm link",
-  "main": "index.js",
+  "main": "src/index.js",
   "bin": {
-    "global-link": "./src/index.js"
+    "global-link": "./src/bin.js"
   },
   "scripts": {
     "start": "node src/index.js",
